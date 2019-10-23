@@ -1,4 +1,5 @@
 import unittest
+from mixtapeFire import *
 
 class TestNotebook(unittest.TestCase):
 
