@@ -39,7 +39,34 @@ Hint:
 '''
 def sort_numbers(a, b, c):
     small, middle, large = None, None, None
-    # ---- your code goes here ----
-    
+    # ---- your code goes here ---- 
+    if (a > b):
+        if (b > c): # a > b > c
+            large = a
+            middle = b
+            small = c
+        else:
+            small = b
+            if (a > c): # a > c > b
+                large = a
+                middle = c
+            else: # c > a > b
+                large = c
+                middle = a
+    else:
+        if (a > c): # b > a > c
+            large = b
+            middle = a
+            small = c
+        else:
+            small = a
+            if (b > c): # b > c > a
+                large = b
+                middle = c
+            else: # c > b > a
+                large = c
+                middle = b
     # -----------------------------
     return small, middle, large
+
+print(sort_numbers(1,2,3))
